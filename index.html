@@ -171,11 +171,7 @@ function show(){
   <div class="links">
     ${d.url?`<a href="${esc(d.url)}" target="_blank" rel="noopener">🌐 홈페이지</a>`:'<span class="muted">홈페이지 없음</span>'}
     <a href="${d.dart}" target="_blank" rel="noopener">📄 DART 감사보고서(FY25)</a>
-    <span>📰 네이버 뉴스:
-      <a href="https://search.naver.com/search.naver?where=news&sort=1&query=${encodeURIComponent('"'+d.name+'"')}" target="_blank" rel="noopener">회사명</a> ·
-      <a href="https://search.naver.com/search.naver?where=news&sort=1&query=${encodeURIComponent('"'+d.name+'" 반도체')}" target="_blank" rel="noopener">+반도체</a> ·
-      <a href="https://search.naver.com/search.naver?where=news&sort=1&query=${encodeURIComponent('"'+d.name+'" '+d.ceo)}" target="_blank" rel="noopener">+대표(${esc(d.ceo)})</a></span>
-    <a href="https://thevc.kr/search?keyword=${encodeURIComponent(d.name)}" target="_blank" rel="noopener">더브이씨</a>
+    <a href="https://search.naver.com/search.naver?where=news&sort=1&query=${encodeURIComponent('"'+d.name+'"')}" target="_blank" rel="noopener">📰 네이버 뉴스</a>
   </div>
   <div class="kpis">
     <div class="kpi"><div class="l">매출 FY25</div><div class="v">${fmt(f.rev[2])}</div><div class="s">YoY ${d.growth}%</div></div>
