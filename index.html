@@ -226,11 +226,7 @@ function show(){
     </dl>
   </section>
 
-  <section><h3>📝 내 메모 <span class="muted small">(이 PC 브라우저에만 저장)</span></h3>
-    <textarea id="memo" placeholder="접촉 내용, 확인할 것 등">${esc(store.get("memo:"+d.name))}</textarea>
-  </section>
   <p class="src">출처: DART 감사보고서 · 금투협 대표주관계약 · 홈페이지/뉴스 웹조사 — 제품검증 근거: ${esc(d.verify.src)}</p>`;
-  $("#memo").addEventListener("input", e => store.set("memo:"+d.name, e.target.value));
   $("main").scrollTop = 0;
 }
 $("#list").addEventListener("click", e => { const it = e.target.closest(".item"); if (it){ cur = +it.dataset.i; show(); } });
